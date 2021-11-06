@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { api } from "../services/api";
+import "./joke.css";
 
 const Joke = () => {
   const [joke, setJoke] = useState("");
@@ -10,12 +11,16 @@ const Joke = () => {
     return api
       .get("https://api.jokes.one/jod")
       .then((response) => {
-        console.log(response);
         setJoke(response.data.contents.jokes[0].joke.text);
       })
-      .catch(() => "Klarte ikke hente dagens spøk");
+      .catch(() => setJoke("Klarte ikke hente dagens spøk"));
   };
-  return <>{joke}</>;
+  return (
+    <div className="box1 sb5">
+      {joke}
+      <br />- jokes.one
+    </div>
+  );
 };
 
 export default Joke;
