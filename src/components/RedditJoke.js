@@ -13,7 +13,6 @@ const RedditJoke = () => {
         margin: "20px",
       }}
     >
-      <h1>{jokes[0].joke}</h1>
       <img src={JOKE2} style={{ height: "40vh" }} alt="joke" />
     </div>
   );
