@@ -1,5 +1,6 @@
 import {api} from "../services/api";
 import {useEffect, useState} from "react";
+import img from "../icons/03d.png"
 
 function Weather() {
     const [data, setData] = useState()
@@ -30,9 +31,9 @@ function Weather() {
     }, [])
 
     return (
-        <div>
-            <div style={{color: "white"}}>Temperatur: {getTemperatureData(getWeatherByHour(0))?.air_temperature}</div>
-            <div style={{color: "white"}}>Ikonpath: {getWeatherIcon(getWeatherByHour(0))}</div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div style={{color: "white", alignSelf:'center'}}>Temperatur: {getTemperatureData(getWeatherByHour(0))?.air_temperature}</div>
+            <div style={{color: "white"}}><img src={img}/></div>
         </div>
     );
 }
