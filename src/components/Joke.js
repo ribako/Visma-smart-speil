@@ -19,6 +19,7 @@ const Joke = () => {
     <div className="box1 sb5">
       <h3>
         {joke}
+        <br />
         <br />- jokes.one
       </h3>
     </div>

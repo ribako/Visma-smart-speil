@@ -34,12 +34,22 @@ function Weather() {
   }, []);
 
   return (
-    <div style={{ justifyContent: "center", margin: "20px" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: "20px",
+      }}
+    >
       <div style={{ color: "white" }}>
         <img src={img} />
       </div>
-      <div style={{ color: "white", alignSelf: "center" }}>
-        Temperatur: {getTemperatureData(getWeatherByHour(0))?.air_temperature}°c
+      <div style={{ color: "white", alignSelf: "center", marginLeft: "8px" }}>
+        <h2>
+          {getTemperatureData(getWeatherByHour(0))?.air_temperature}
+          °c
+        </h2>
       </div>
     </div>
   );
