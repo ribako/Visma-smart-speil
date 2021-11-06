@@ -31,8 +31,8 @@ function Weather() {
 
     return (
         <div>
-            <p>Temperatur: {getTemperatureData(getWeatherByHour(0))?.air_temperature}</p>
-            <p>Ikonpath: {getWeatherIcon(getWeatherByHour(0))}</p>
+            <div style={{color: "white"}}>Temperatur: {getTemperatureData(getWeatherByHour(0))?.air_temperature}</div>
+            <div style={{color: "white"}}>Ikonpath: {getWeatherIcon(getWeatherByHour(0))}</div>
         </div>
     );
 }
