@@ -1,42 +1,41 @@
 import axios from "axios";
-const baseHost = window.location.protocol + '//' + window.location.hostname;
-
+const baseHost = window.location.protocol + "//" + window.location.hostname;
 
 class WrappedApi {
-    constructor() {
-        let host;
-        if (process.env.NODE_ENV !== 'production') {
-           //
-        }
-        const innerApi = axios.create({
-            baseURL: baseHost,
-            timeout: 60000,
-        });
-
-        // innerApi.defaults.headers.post['Content-Type'] = 'application/json';
-        // innerApi.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-        this.innerApi = innerApi;
+  constructor() {
+    let host;
+    if (process.env.NODE_ENV !== "production") {
+      //
     }
+    const innerApi = axios.create({
+      baseURL: baseHost,
+      timeout: 60000,
+    });
 
-    get(url, params) {
-        return this.innerApi.get(url, params);
-    }
+    // innerApi.defaults.headers.post['Content-Type'] = 'application/json';
+    // innerApi.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+    this.innerApi = innerApi;
+  }
 
-    getByUrl(url) {
-        return this.innerApi.get(url);
-    }
+  get(url, params) {
+    return this.innerApi.get(url, params);
+  }
 
-    post(url, data, config) {
-        return this.innerApi.post(url, data, config);
-    }
+  getByUrl(url) {
+    return this.innerApi.get(url);
+  }
 
-    delete(url, config) {
-        return this.innerApi.delete(url, config);
-    }
+  post(url, data, config) {
+    return this.innerApi.post(url, data, config);
+  }
 
-    put(url, data, config) {
-        return this.innerApi.put(url, data, config);
-    }
+  delete(url, config) {
+    return this.innerApi.delete(url, config);
+  }
+
+  put(url, data, config) {
+    return this.innerApi.put(url, data, config);
+  }
 }
 
 export const api = new WrappedApi();
