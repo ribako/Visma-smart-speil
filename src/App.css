@@ -4,6 +4,12 @@
   height: 100vh;
 }
 
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

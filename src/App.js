@@ -4,12 +4,13 @@ import Joke from "./components/Joke";
 import RedditJoke from "./components/RedditJoke";
 import Weather from "./components/Weather";
 
-
 function App() {
   return (
     <div className="App">
-      <Weather />
-      <Joke />
+      <div className="flex-horizontal">
+        <Weather style={{ margin: "20px" }} />
+        <Joke />
+      </div>
       <RedditJoke />
     </div>
   );

@@ -1,6 +1,5 @@
 .box1 {
   width: 300px;
-  margin: auto;
   border: 4px solid white;
   padding: 20px;
   text-align: center;
@@ -8,6 +7,8 @@
   color: white;
   font-family: arial;
   position: relative;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 /* speech bubble 5 */

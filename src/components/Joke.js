@@ -17,8 +17,10 @@ const Joke = () => {
   };
   return (
     <div className="box1 sb5">
-      {joke}
-      <br />- jokes.one
+      <h3>
+        {joke}
+        <br />- jokes.one
+      </h3>
     </div>
   );
 };
